@@ -2,9 +2,18 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
+    signingConfigs {
+        Terremoto {
+            storeFile file('/Users/georgeperez/terremoto.keystore')
+            storePassword var
+            keyAlias 'george_perez'
+            keyPassword var
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
@@ -16,12 +25,14 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.Terremoto
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.Terremoto
         }
     }
     compileOptions {
@@ -45,4 +56,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.preference:preference-ktx:1.1.1"
+    //Google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
 }

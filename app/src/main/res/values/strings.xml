@@ -1,3 +1,6 @@
 <resources>
-    <string name = "app_name">JungleWars</string>
+    <string name="app_name">JungleWars</string>
+    <string name="web_clientid">167609992807-nrhb50tqa1m36e46b61qvks00pgc6udh.apps.googleusercontent.com</string>
+    <string name="tagx">TAG_X</string>
+    <string name="logout">Logout</string>
 </resources>

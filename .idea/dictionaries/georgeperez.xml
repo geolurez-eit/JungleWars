@@ -2,11 +2,17 @@
   <dictionary name="georgeperez">
     <words>
       <w>appname</w>
+      <w>clientid</w>
       <w>dorg</w>
       <w>endlocal</w>
       <w>errorlevel</w>
+      <w>googleusercontent</w>
       <w>junglewars</w>
+      <w>nrhb</w>
+      <w>qvks</w>
       <w>setlocal</w>
+      <w>signin</w>
+      <w>tagx</w>
     </words>
   </dictionary>
 </component>
